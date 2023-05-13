@@ -5,73 +5,19 @@ import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import {useHistory} from 'react-router-dom';
 import {useSpring, animated} from '@react-spring/web';
 import {CircularProgress, Stack} from '@mui/material';
+import pagesData from './data2.json';
 import "mapbox-gl/dist/mapbox-gl.css";
 import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
 
 mapboxgl.accessToken =
   "pk.eyJ1Ijoia2VzaGF2c2hhcm1hMDEwMyIsImEiOiJjbGdnNG9ncTcwODIzM2VycnFzeXR6amZwIn0.CXYpx8GEO0JRa18exxV4XA";
 
-// const Soilanalysis = () => {
-//   const [loading, setLoading] = useState(false);
-//   const [predictionType, setPredictionType] = useState("none");
-//   const navigate = useHistory();
-
-//   const fadeLeft = useSpring({
-//     from: {opacity: 0, transform: 'translateX(-100px)'},
-//     to: {opacity: 1, transform: 'translateX(0px)'},
-//     config: {duration: 500},
-//   });
-
-//   const fadeLeft2 = useSpring({
-//     from: {opacity: 0, transform: 'translateX(-100px)'},
-//     to: {opacity: 1, transform: 'translateX(0px)'},
-//     config: {duration: 500},
-//     delay: 500,
-//   });
-
-//   const fadeLeft3 = useSpring({
-//     from: {opacity: 0, transform: 'translateX(-100px)'},
-//     to: {opacity: 1, transform: 'translateX(0px)'},
-//     config: {duration: 500},
-//     delay: 1000,
-//   });
-
-
-//   const [result, setResult] = useState("");
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
- 
-//     const inputValue = [[
-//       data.AQI,data.OZONE,data.CO,weatherData.temperature,weatherData.humidity,data.NO2,data.SO2
-//     ]]
-//     console.log(inputValue)
-//     axios.post('http://localhost:5000/classify', {inputValue})
-//       .then(response => {
-//         console.log(response.data)
-//         setResult(response.data);
-//       })
-//       .catch(error => {
-//         console.log(error);
-//       });
-//         let page = data[0]
-//         navigate.push('/CropRecommend/' + page);
-//         // navigate(`/diseases/${predictionType.toLowerCase()}/` + page);
-//       }
-
-//       const updatePredictionType = (e) => {
-//         setPredictionType(e.target.value);
-//       }
-    
-// }
-
-
 function Soilanalysis() {
   const [data, setData] = useState({});
   const [weatherData, setWeatherData] = useState({});
   const [location, setLocation] = useState({});
   const mapContainer = useRef(null);
-  
+  const navigate = useHistory();
 
   const [result, setResult] = useState("");
 
@@ -81,11 +27,13 @@ function Soilanalysis() {
     const inputValue = [[
       data.AQI,data.OZONE,data.CO,weatherData.temperature,weatherData.humidity,data.NO2,data.SO2
     ]]
-    console.log(inputValue)
+    // console.log(inputValue)
     axios.post('http://localhost:5000/classify', {inputValue})
       .then(response => {
-        console.log(response.data)
-        setResult(response.data);
+        let pageName = response.data[0]
+        let pageNumber = Object.values(pagesData).findIndex(pageData => pageData.name.toLowerCase() == pageName)
+        navigate.push('/CropRecommend/' + pageNumber);
+
       })
       .catch(error => {
         console.log(error);
