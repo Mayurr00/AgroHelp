@@ -39,11 +39,7 @@ export default function CropRecommend() {
 
         <animated.div style={fadeDown2}>
           <img
-            src={
-              localStorage.getItem('uploaded') === 'true'
-                ? localStorage.getItem('userImage')
-                : `/sample-CropRecommend/${id}.jpg`
-            }
+            src={`/sample-CropRecommend/${id}.jpg`}
             alt={`${id}.jpg`}
             className="w-[20rem] mt-6 rounded-xl"
           />
@@ -51,7 +47,12 @@ export default function CropRecommend() {
 
           <animated.div style={fadeDown4} className="mt-[2rem]">
             <div className="text-[32px] font-bold font-serif">Description </div>
-            <div className="text-[#666e75] mt-[1rem]">{CropRecommend.cause}</div>
+            <div className="text-[#666e75] mt-[1rem]">{CropRecommend.description}</div>
+          </animated.div>
+
+          <animated.div style={fadeDown4} className="mt-[2rem]">
+            <div className="text-[32px] font-bold font-serif">Cultivation </div>
+            <div className="text-[#666e75] mt-[1rem]">{CropRecommend.cultivation}</div>
           </animated.div>
 
         </div>

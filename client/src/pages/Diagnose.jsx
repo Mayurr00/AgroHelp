@@ -172,7 +172,7 @@ const Diagnose = () => {
         <animated.div align='center' style={fadeLeft}>
           <h1 className="text-[32px] font-bold font-serif">Diagnose</h1>
           <p className="text-[16px] text-[#666e75] lg:w-[50rem] w[20rem] mt-4">
-            This feature allows users to upload images of their maize crop and Apple images and
+            This feature allows users to upload images of their Crops and Fruits images and
             uses Image Recognition Technology to detect any signs of disease. It then provides a diagnosis of the
             disease along with recommended treatment options. This feature is
             designed to assist farmers in identifying and addressing potential

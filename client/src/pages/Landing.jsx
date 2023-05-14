@@ -25,7 +25,7 @@ const Home = () => {
         }}
       >
       </div>
-      <StyledTitle size={65}>Welcome to CropTech</StyledTitle>
+      <StyledTitle size={65}>Welcome to AgroHelp</StyledTitle>
       <StyledSubTitle size={27}>Feel free to explore our page</StyledSubTitle>
       <ButtonGroup>
         <StyledButton to="/login">Login</StyledButton>
