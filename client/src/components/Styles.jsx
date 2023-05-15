@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import background from "../assets/bg.png";
+import background from "../assets/logo.jfif";
 
 // React router
 import { Link } from "react-router-dom";

@@ -63,7 +63,6 @@ const Signup = () => {
             email: "",
             password: "",
             repeatPassword: "",
-            dateOfBirth: "",
             name: "",
           }}
           validationSchema={Yup.object({
@@ -75,7 +74,6 @@ const Signup = () => {
               .max(30, "Password is too long")
               .required("Required"),
             name: Yup.string().required("Required"),
-            dateOfBirth: Yup.date().required("Required"),
             repeatPassword: Yup.string()
               .required("Required")
               .oneOf([Yup.ref("password")], "Passwords must match"),
@@ -99,12 +97,6 @@ const Signup = () => {
                 label="Email Address"
                 placeholder="olga1@example.com"
                 icon={<FiMail />}
-              />
-              <TextInput
-                name="dateOfBirth"
-                type="date"
-                label="Date of Birth"
-                icon={<FiCalendar />}
               />
               <TextInput
                 name="password"

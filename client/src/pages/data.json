@@ -61,7 +61,7 @@
     "name": "Potato Late Blight",
     "scientific_name": "Phytophthora infestans",
     "symptoms": "Late blight will first appear as water-soaked spots, usually at the tips or edges of lower leaves where water or dew tends to collect. Under moist, cool conditions, water-soaked spots rapidly enlarge and a broad yellow halo may be seen surrounding the lesion",
-    "p7revention": ["Eliminating cull piles and volunteer potatoes, using proper harvesting and storage practices, and applying fungicides when necessary.",
+    "prevention": ["Eliminating cull piles and volunteer potatoes, using proper harvesting and storage practices, and applying fungicides when necessary.",
         "Air drainage to facilitate the drying of foliage each day is important.",
       "In districts that are commonly subjected to outbreaks of late blight, preventive applications of fungicides are advised when environmental conditions are favorable for the disease"],
     "cause":  "Late blight is found when humid conditions coincide with mild temperatures for prolonged periods. When humidity is above 90% and the average temperature is in the range of 60° to 78°F, infection occurs in about 10 hours"

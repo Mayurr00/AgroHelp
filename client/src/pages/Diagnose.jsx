@@ -183,24 +183,7 @@ const Diagnose = () => {
           <p className="text-[16px] mt-10">
             Upload an image or choose from one of our demo images below!
           </p>
-        <div align='center'>
-          <select align='center'
-            onChange={(e) => updateSelect(e)}
-            value={select}
-            className="mt-6 bg-white border px-4 py-2 w-[14rem] rounded-md text-center "
-            ame="paddies"
-            id="paddies"
-          >
-            <option value="none" disabled hidden></option>
-            <option value="0">Blight (Maize)</option>
-            <option value="1">Common Rust (Maize)</option>
-            <option value="2">Gray Leaf Spot (Maize)</option>
-            <option value="3">Blast (Maize)</option>
-            <option value="4">Disease 1 (Apple)</option>
-            <option value="5">Disease 2 (Apple)</option>
-            <option value="6">Disease 3 (Apple)</option>
-            
-          </select>
+
           <select align='center'
             onChange={(e) => updatePredictionType(e)}
             value={predictionType}
@@ -220,13 +203,32 @@ const Diagnose = () => {
             <option value="6">Disease 3 (Apple)</option> */}
             
           </select>
-          
-
+          <br></br>
+        <div align='center'>
+          <select align='center'
+            onChange={(e) => updateSelect(e)}
+            value={select}
+            className="mt-6 bg-white border px-4 py-2 w-[14rem] rounded-md text-center "
+            ame="paddies"
+            id="paddies"
+          >
+            <option value="none" disabled hidden></option>
+            <option value="0">Blight (Maize)</option>
+            <option value="1">Common Rust (Maize)</option>
+            <option value="2">Gray Leaf Spot (Maize)</option>
+            <option value="3">Blast (Maize)</option>
+            <option value="4">Disease 1 (Apple)</option>
+            <option value="5">Disease 2 (Apple)</option>
+            <option value="6">Disease 3 (Apple)</option>
+            
+          </select>
+        
           <input align='center'
             onChange={(e) => updateUserImage(e)}
             type="file"
             name="userImage"
             id="userImage"
+            placeholder="Choose the image"
             className="mt-6 block w-full text-sm text-[#666e75] file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#2c302e] file:text-[#9ae19f] hover:file:bg-[#3b5449]"
           />
           {image && (

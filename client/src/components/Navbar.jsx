@@ -1,8 +1,11 @@
 import {useState} from 'react';
-import {Link} from 'react-router-dom';
+import {Link , useHistory} from 'react-router-dom';
 import {useSpring, animated} from '@react-spring/web';
+import { connect } from "react-redux";
+import { logoutUser } from "../auth/actions/userActions";
 
-const Navbar = () => {
+const Navbar = ({logoutUser}) => {
+  const history = useHistory()
   // STATES
   const [hamburger, setHamburger] = useState(false); // State for toggling hamburger menu
   const props = useSpring({
@@ -23,7 +26,7 @@ const Navbar = () => {
     <nav class="h-[5rem] shadow-inner bg-green-100 flex items-center justify-between p-6 lg:px-8 fixed top-0 left-0 right-0 z-10">
       
       <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
+        <a href="/home" class="-m-1.5 p-1.5">
           <img class="h-14 w-auto" src="logo.png" alt=""/>
         </a>
       </div>
@@ -47,7 +50,9 @@ const Navbar = () => {
       </div>
 
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="/home" class="text-sm font-semibold leading-6 text-gray-900">Back to Home<span aria-hidden="true">&rarr;</span></a>
+        <a onClick={()=>{
+          logoutUser(history)
+        }} class="text-sm font-semibold leading-6 text-gray-900">Logout<span aria-hidden="true">&rarr;</span></a>
       </div>
 
     </nav>
@@ -56,5 +61,4 @@ const Navbar = () => {
   </header>
   );
 };
-
-export default Navbar;
+export default connect(null, { logoutUser })(Navbar);

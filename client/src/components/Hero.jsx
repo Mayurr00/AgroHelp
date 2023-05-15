@@ -37,7 +37,7 @@ const Hero = () => {
             className="flex flex-col justify-center items-center"
             style={fadeDown}
           >
-            <h1 className="text-white lg:text-[56px] md:text-[50px] text-[35px] font-extrabold drop-shadow-2xl">
+            <h1 className="text-[#073763] lg:text-[56px] md:text-[50px] text-[35px] font-extrabold drop-shadow-2xl">
               AgroHelp
             </h1>
             <p className="text-[#073763] font-semibold drop-shadow-lg text-center text-[18px] mt-[2rem]">
