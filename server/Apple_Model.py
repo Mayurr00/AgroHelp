@@ -64,6 +64,7 @@ def data_pre_processing(valid_split = 0,input_size = (260, 260),image_color = 'r
 train,test,validation=data_pre_processing()
 
 
+# Plottings
 labels=dict()
 for label_name,label_num in train.class_indices.items():
         labels[label_num]=label_name
@@ -115,6 +116,7 @@ max_val = float(max(counter.values()))
 class_weights1 = {class_id : max_val/num_images for class_id, num_images in counter.items()}   
 hist=final_model.fit(train,epochs=10,validation_data=(validation),callbacks=callbacks,class_weight=class_weights1)
 
+# Plots and Results
 plt.figure(figsize=(10, 10))
 plt.plot(hist.history['accuracy'])
 plt.plot(hist.history['val_accuracy'])

@@ -214,12 +214,16 @@ const Diagnose = () => {
           >
             <option value="none" disabled hidden></option>
             <option value="0">Blight (Maize)</option>
-            <option value="1">Common Rust (Maize)</option>
+            <option value="1">Common Rust (Maize)</option>c
             <option value="2">Gray Leaf Spot (Maize)</option>
             <option value="3">Blast (Maize)</option>
-            <option value="4">Disease 1 (Apple)</option>
-            <option value="5">Disease 2 (Apple)</option>
-            <option value="6">Disease 3 (Apple)</option>
+            <option value="4">Potato Early Blight (Potato)</option>
+            <option value="5">Potato Late Blight (Potato)</option>
+            <option value="6">Healthy Potato (Potato)</option>
+            <option value="7"> Apple Scab (Apple) </option>
+            <option value="8"> Apple Black Rot (Apple) </option>
+            <option value="9"> Cedar Apple Rust (Apple) </option>
+            <option value="10"> Healthy Apple (Apple) </option>
             
           </select>
         

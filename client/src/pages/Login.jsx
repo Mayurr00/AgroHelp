@@ -113,7 +113,7 @@ const Login = ({ loginUser }) => {
         </ExtraText>
       </StyledFormArea>
       <CopyrightText>
-        All rights reserved &copy;2023
+      Mini Project Group 18
       </CopyrightText>
     </div>
   );

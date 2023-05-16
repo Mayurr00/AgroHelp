@@ -136,7 +136,7 @@ const Signup = () => {
            <TextLink to="/">go back</TextLink>
         </ExtraText>
       </StyledFormArea>
-      <CopyrightText>All rights reserved &copy;2023</CopyrightText>
+      <CopyrightText>Mini Project Group 18</CopyrightText>
     </div>
   );
 };
