@@ -26,7 +26,7 @@ To run the project, follow these steps in your terminal:
 
 1. Navigate to the client directory: 
 $ cd client
-2 . Start the React development server:
+2. Start the React development server:
 $ npm run dev
 3. Keep the React server running and open a new terminal window or tab.
 Navigate back to the project root directory.
