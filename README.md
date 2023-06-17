@@ -25,20 +25,13 @@ $ git checkout master
 To run the project, follow these steps in your terminal:
 
 1. Navigate to the client directory: 
-</br>
 $ cd client
-</br>
 2 . Start the React development server:
-</br>
 $ npm run dev
-</br>
 3. Keep the React server running and open a new terminal window or tab.
-</br>
 Navigate back to the project root directory.
-</br>
 Run the Flask server:
-</br>
-python app.py
+$ python app.py
 </br>
 Now, you should have both the React frontend and Flask backend running simultaneously. The React development server will handle the frontend of the website, while the Flask server will handle the backend logic and API communication. You can access the website by opening a web browser and visiting the provided localhost URL.
 
