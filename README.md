@@ -24,12 +24,13 @@ $ git checkout master
 # How to run this project
 To run the project, follow these steps in your terminal:
 
-1. Navigate to the client directory:
-cd client
+1. Navigate to the client directory: 
+</br>
+$ cd client
 </br>
 2 . Start the React development server:
 </br>
-npm run dev
+$ npm run dev
 </br>
 3. Keep the React server running and open a new terminal window or tab.
 </br>
