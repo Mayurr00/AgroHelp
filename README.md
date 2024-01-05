@@ -4,7 +4,7 @@ Additionally, AgroHelp integrates soil analysis capabilities by leveraging live 
 
 
 # How to use
-To download the Money Maven project from both the main and master branches, follow these steps:
+To download the Money Maven project from both the main and master branches, follow the below steps:
 1. Navigate to the repository on GitHub.
 2. Click on the "Code" button and select "Download ZIP".
 3. Extract the ZIP file to your desired location.
